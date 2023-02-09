@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="16dp"
+    android:elevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/character_image"
+            android:layout_width="77dp"
+            android:layout_height="96dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/baseline_10k_24"
+            />
+
+        <TextView
+            android:id="@+id/character_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/name"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Anakin Skywalker"
+            />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/character_image"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Name: "
+            />
+
+        <TextView
+            android:id="@+id/character_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="41 BBY"
+            app:layout_constraintTop_toTopOf="@id/age"
+            app:layout_constraintStart_toEndOf="@id/age"
+            />
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            app:layout_constraintStart_toStartOf="@id/name"
+            android:text="Born: "
+            />
+
+        <TextView
+            android:id="@+id/character_planet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/birth_planet"
+            app:layout_constraintTop_toTopOf="@id/birth_planet"
+            tools:text="Tatooine"
+            />
+
+        <TextView
+            android:id="@+id/birth_planet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/age"
+            app:layout_constraintTop_toBottomOf="@id/age"
+            android:text="Birth Planet: "
+            />
+
+        <TextView
+            android:id="@+id/character_affiliation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/affiliation"
+            app:layout_constraintTop_toTopOf="@id/affiliation"
+            tools:text="Jedi"
+            />
+
+        <TextView
+            android:id="@+id/affiliation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/birth_planet"
+            app:layout_constraintTop_toBottomOf="@id/birth_planet"
+            android:text="Affiliation: "
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
