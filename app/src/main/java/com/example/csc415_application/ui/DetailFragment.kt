@@ -5,19 +5,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import com.example.csc415_application.R
 
 
 class DetailFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
 
 
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
@@ -28,10 +28,12 @@ class DetailFragment : Fragment() {
             val age = requireArguments().getString("age")
             val image = requireArguments().getString("image")
             val planet = requireArguments().getString("planet")
-            val id = requireArguments().getString("id")
             val affiliation = requireArguments().getString("affiliation")
 
-            view.findViewById<TextView>(R.id.character_id)
+            view.findViewById<TextView>(R.id.character_name).text = name
+            view.findViewById<TextView>(R.id.character_age).text = age
+            //view.findViewById<ImageView>(R.id.character_image) = image
+
 
 
         }

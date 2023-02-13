@@ -46,24 +46,31 @@ class CharacterAdapter(private val characters: List<Character>) :
 
     override fun onBindViewHolder(holder: CharacterViewHolder, position: Int) {
         val character = characters[position]
-        //holder.chatacterImage.setImageResource(character.image)
+        //holder.characterImage.setImageResource(character.image)
         //Glide.with(this).load("http://goo.gl/gEgYUd").into(imageView);
-        Glide.with(holder.itemView.context).load(character.image).into(holder.chatacterImage)
+        Glide
+            .with(holder.itemView.context)
+            .load(character.image)
+            .into(holder.characterImage)
         holder.characterName.text = character.name
-        holder.characterAge.text = character.age.toString()
+        holder.characterAge.text = character.age
         holder.characterPlanet.text = character.planet
         holder.characterAffiliation.text = character.affiliation
+
+
     }
 
     inner class CharacterViewHolder(
         itemView: View,
         private val onItemClick: (adapterPosition: Int) -> Unit
     ) : RecyclerView.ViewHolder(itemView) {
-        val chatacterImage: ImageView = itemView.findViewById(R.id.character_image)
+        val characterImage: ImageView = itemView.findViewById(R.id.character_image)
         val characterName: TextView = itemView.findViewById(R.id.character_name)
         val characterAge: TextView = itemView.findViewById(R.id.character_age)
         val characterPlanet: TextView = itemView.findViewById(R.id.character_planet)
         val characterAffiliation: TextView = itemView.findViewById(R.id.character_affiliation)
+
+
 
         init {
             itemView.setOnClickListener {
