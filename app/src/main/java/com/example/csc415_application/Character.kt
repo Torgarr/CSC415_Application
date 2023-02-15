@@ -7,4 +7,5 @@ data class Character(
     val planet: String,
     val id: Int,
     val affiliation: String,
+    val desc: String,
 )

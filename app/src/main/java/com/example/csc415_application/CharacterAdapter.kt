@@ -27,7 +27,8 @@ class CharacterAdapter(private val characters: List<Character>) :
                 "image" to character.image,
                 "planet" to character.planet,
                 "id" to character.id,
-                "affiliation" to character.affiliation
+                "affiliation" to character.affiliation,
+                "desc" to character.desc
             )
             val detailFragment = DetailFragment()
             detailFragment.arguments = bundle
@@ -56,6 +57,7 @@ class CharacterAdapter(private val characters: List<Character>) :
         holder.characterAge.text = character.age
         holder.characterPlanet.text = character.planet
         holder.characterAffiliation.text = character.affiliation
+        //holder.characterDescription.text = character.desc
 
 
     }
@@ -69,6 +71,7 @@ class CharacterAdapter(private val characters: List<Character>) :
         val characterAge: TextView = itemView.findViewById(R.id.character_age)
         val characterPlanet: TextView = itemView.findViewById(R.id.character_planet)
         val characterAffiliation: TextView = itemView.findViewById(R.id.character_affiliation)
+        //val characterDescription: TextView = itemView.findViewById(R.id.character_desc)
 
 
 
